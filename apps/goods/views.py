@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.views import View
-from apps.goods.models import *
 from utils.goods import *
 from apps.contents.models import *
-from utils.minio_client import *
+from apps.goods.models import SKU
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -25,3 +25,45 @@ class Index(View):
         }
 
         return render(request, 'index.html', context)
+
+
+class GoodsList(View):
+    def get(self, request, cat_id):
+        ordering = request.GET.get('ordering')
+        page = request.GET.get('page')
+        page_size = request.GET.get('page_size')
+
+        try:
+            category = GoodsCategory.objects.get(id=cat_id)
+        except GoodsCategory.DoesNotExist:
+            return JsonResponse({'code': 400, 'errmsg': '不存在此id'})
+
+        breadcrumb = get_breadcrumb(category)
+
+        try:
+            skus = SKU.objects.filter(category=category, is_launched=True).order_by(ordering)
+        except:
+            return JsonResponse({'code': 400, 'errmsg': '查询失败'})
+
+        from django.core.paginator import Paginator
+        p = Paginator(skus, page_size)
+        goods_page = p.page(page)
+
+        goods_list = []
+        for sku in goods_page.object_list:
+            goods_list.append({
+                'id': sku.id,
+                'name': sku.name,
+                'price': sku.price,
+                'default_image_url': sku.default_image.url
+            })
+
+        total_page = p.num_pages
+
+        return JsonResponse({
+            'code': 0,
+            'errmsg': 'ok',
+            'breadcrumb': breadcrumb,
+            'list': goods_list,
+            'count': total_page
+        })
