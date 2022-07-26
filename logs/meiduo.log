@@ -3419,3 +3419,66 @@ INFO 2022-07-23 15:03:58,922 basehttp 187 "GET /list/115/skus/?page=1&page_size=
 INFO 2022-07-23 15:03:59,850 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1519
 INFO 2022-07-23 15:04:01,475 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-sales HTTP/1.1" 200 1424
 INFO 2022-07-23 15:04:03,285 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1521
+INFO 2022-07-25 13:15:05,658 autoreload 677 Watching for file changes with StatReloader
+INFO 2022-07-25 13:15:18,995 autoreload 677 Watching for file changes with StatReloader
+INFO 2022-07-25 13:15:40,374 basehttp 187 "GET /index/ HTTP/1.1" 200 124487
+WARNING 2022-07-25 13:15:40,409 basehttp 187 "GET /static/images/logo.png HTTP/1.1" 404 1810
+WARNING 2022-07-25 13:15:42,625 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 13:15:42,625 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+WARNING 2022-07-25 13:15:46,642 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 13:15:46,643 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+INFO 2022-07-25 13:15:46,650 basehttp 187 "GET /hot/115/ HTTP/1.1" 200 1312
+INFO 2022-07-25 13:15:46,650 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1521
+INFO 2022-07-25 13:15:51,693 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-sales HTTP/1.1" 200 1424
+INFO 2022-07-25 13:15:55,421 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1521
+WARNING 2022-07-25 13:15:59,327 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 13:15:59,328 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+WARNING 2022-07-25 13:16:01,254 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 13:16:01,255 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+INFO 2022-07-25 13:16:52,772 autoreload 677 Watching for file changes with StatReloader
+WARNING 2022-07-25 13:16:55,781 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 13:16:55,781 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+INFO 2022-07-25 13:16:55,787 basehttp 187 "GET /hot/115/ HTTP/1.1" 200 1316
+INFO 2022-07-25 13:16:55,787 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1521
+INFO 2022-07-25 13:16:57,786 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-sales HTTP/1.1" 200 1424
+INFO 2022-07-25 13:16:59,113 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1521
+WARNING 2022-07-25 13:17:07,023 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 13:17:07,024 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+WARNING 2022-07-25 13:17:17,395 log 241 Not Found: /carts/simple/
+INFO 2022-07-25 13:17:17,400 basehttp 187 "GET /hot/115/ HTTP/1.1" 200 1316
+INFO 2022-07-25 13:17:17,400 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1521
+WARNING 2022-07-25 13:17:17,400 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+WARNING 2022-07-25 13:17:24,410 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 13:17:24,412 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+INFO 2022-07-25 13:17:52,825 autoreload 677 Watching for file changes with StatReloader
+INFO 2022-07-25 13:17:57,165 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1521
+WARNING 2022-07-25 13:17:57,170 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 13:17:57,172 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+INFO 2022-07-25 13:18:40,324 autoreload 677 Watching for file changes with StatReloader
+INFO 2022-07-25 13:18:42,793 basehttp 187 "GET /hot/115/ HTTP/1.1" 200 1326
+INFO 2022-07-25 13:18:42,794 basehttp 187 "GET /list/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1521
+WARNING 2022-07-25 13:18:42,799 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 13:18:42,800 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+INFO 2022-07-25 13:21:36,659 basehttp 187 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2022-07-25 13:21:36,659 basehttp 187 "OPTIONS /detail/visit/115/ HTTP/1.1" 200 0
+WARNING 2022-07-25 13:21:36,660 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 13:21:36,666 log 241 Not Found: /detail/visit/115/
+WARNING 2022-07-25 13:21:36,666 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+WARNING 2022-07-25 13:21:36,667 log 241 Not Found: /browse_histories/
+WARNING 2022-07-25 13:21:36,668 basehttp 187 "POST /detail/visit/115/ HTTP/1.1" 404 5493
+WARNING 2022-07-25 13:21:36,668 basehttp 187 "POST /browse_histories/ HTTP/1.1" 404 5493
+INFO 2022-07-25 16:12:57,132 autoreload 677 Watching for file changes with StatReloader
+WARNING 2022-07-25 16:13:20,191 log 241 Not Found: /carts/simple/
+WARNING 2022-07-25 16:13:20,192 basehttp 187 "GET /carts/simple/ HTTP/1.1" 404 5480
+INFO 2022-07-25 16:13:21,519 basehttp 187 "GET /image_codes/6daaaad7-8333-451b-98ec-d3a77ad1ebf0/ HTTP/1.1" 200 2027
+INFO 2022-07-25 16:14:32,151 basehttp 187 "GET /image_codes/d652d557-12fa-47e8-93aa-aef3f11c71c7/ HTTP/1.1" 200 2484
+INFO 2022-07-25 16:14:38,792 basehttp 187 "GET /image_codes/761f935b-cd18-49c5-8b4f-a969db4cae4b/ HTTP/1.1" 200 2758
+INFO 2022-07-26 14:32:59,085 autoreload 677 Watching for file changes with StatReloader
+INFO 2022-07-26 14:33:09,469 autoreload 266 C:\Users\HJX\PycharmProjects\meiduo_market\meiduo_market\settings.py changed, reloading.
+INFO 2022-07-26 14:33:10,006 autoreload 677 Watching for file changes with StatReloader
+INFO 2022-07-26 14:34:52,827 autoreload 677 Watching for file changes with StatReloader
+INFO 2022-07-26 14:34:58,944 autoreload 677 Watching for file changes with StatReloader
+INFO 2022-07-26 14:35:02,405 autoreload 677 Watching for file changes with StatReloader
+INFO 2022-07-26 14:36:58,808 autoreload 266 C:\Users\HJX\PycharmProjects\meiduo_market\meiduo_market\settings.py changed, reloading.
+INFO 2022-07-26 14:36:59,336 autoreload 677 Watching for file changes with StatReloader
+INFO 2022-07-26 14:54:06,457 autoreload 677 Watching for file changes with StatReloader

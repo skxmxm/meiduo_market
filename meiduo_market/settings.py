@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'haystack',
     'apps.users',
     'apps.verifications',
     'corsheaders',
@@ -220,3 +221,12 @@ EMAIL_HOST_PASSWORD = 'YTMASMCQYIBEXRGX'  # 发送邮件的邮箱密码(这里�
 
 # 加载自定义文件存储类
 DEFAULT_FILE_STORAGE = 'utils.storage.MyStorage'
+
+# Haystack配置
+HAYSTACK_CONNECTIONS = {
+    "default": {
+        "ENGINE": 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        "URL": 'http://192.168.31.220:9200/',
+        "INDEX_NAME": 'haystack',
+    }
+}

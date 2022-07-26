@@ -67,3 +67,32 @@ class GoodsList(View):
             'list': goods_list,
             'count': total_page
         })
+
+
+class HotGoods(View):
+    def get(self, request, cat_id):
+        try:
+            category = GoodsCategory.objects.get(id=cat_id)
+        except GoodsCategory.DoesNotExist:
+            return JsonResponse({'code': 400, 'errmsg': '不存在此id'})
+
+        try:
+            skus = SKU.objects.filter(category=category, is_launched=True).order_by("-sales")
+        except:
+            return JsonResponse({'code': 400, 'errmsg': '查询失败'})
+
+        from django.core.paginator import Paginator
+        p = Paginator(skus, 5)
+        goods_page = p.page(1)
+
+        goods_list = []
+
+        for sku in goods_page.object_list:
+            goods_list.append({
+                'id': str(sku.id),
+                'name': sku.name,
+                'price': sku.price,
+                'default_image_url': sku.default_image.url
+            })
+
+        return JsonResponse({'code': 0, 'errmsg': 'ok', 'hot_skus': goods_list})
