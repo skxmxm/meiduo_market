@@ -225,7 +225,7 @@ DEFAULT_FILE_STORAGE = 'utils.storage.MyStorage'
 # Haystack配置
 HAYSTACK_CONNECTIONS = {
     "default": {
-        "ENGINE": 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        "ENGINE": 'haystack.backends.elasticsearch7_backend.Elasticsearch7SearchEngine',
         "URL": 'http://192.168.31.220:9200/',
         "INDEX_NAME": 'haystack',
     }

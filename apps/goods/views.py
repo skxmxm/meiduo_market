@@ -4,6 +4,7 @@ from utils.goods import *
 from apps.contents.models import *
 from apps.goods.models import SKU
 from django.http import JsonResponse
+from haystack.views import SearchView
 
 
 # Create your views here.
@@ -96,3 +97,19 @@ class HotGoods(View):
             })
 
         return JsonResponse({'code': 0, 'errmsg': 'ok', 'hot_skus': goods_list})
+
+
+
+
+class SKUSearchView(SearchView):
+    def create_response(self):
+        context = self.get_context()
+        sku_list = []
+        for sku in context['page'].object_list:
+            sku_list.append({
+                'id': sku.object.id,
+                'name': sku.object.name,
+                'price': sku.object.price,
+                'default_image_url': sku.object.default_image.url
+            })
+        return JsonResponse(sku_list, safe=False)
